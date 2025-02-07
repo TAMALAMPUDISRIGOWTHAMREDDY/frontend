@@ -82,7 +82,7 @@ button:hover {
     margin:auto;
     width:70%;
     height:300px;;
-    gap: 20px;
+    gap: 10px;
 }
 
 .emergency li {
@@ -95,6 +95,7 @@ button:hover {
 
 /* First Aid Images with Updated Paths */
 .emergency img {
+    flex-wrap: wrap;
     width: 150px;
     height: 150px;
     border-radius: 10px;
@@ -104,24 +105,6 @@ button:hover {
 .emergency img:hover {
     transform: scale(1.1);
 }
-
-/* Specific Image Paths */
-#cpr img {
-    content: url("/static/images/cpr.jpg");
-}
-
-#snake_bites img {
-    content: url("/static/images/snake_bite.jpg");
-}
-
-#fire_accidents img {
-    content: url("/static/images/fire_accident.jpg");
-}
-
-#electric_shocks img {
-    content: url("/static/images/electric_shock.jpg");
-}
-
 /* First Aid Content */
 .first-aid {
     width: 80%;
@@ -170,4 +153,22 @@ button:hover {
 #disclaimer{
     color:rgba(255,0,0,1.2);
     font-size: 20px;
+}
+@media only screen and (max-width:1475px){
+    .emergency{
+        height:550px;;
+    }
+    .emergency img{
+        width:130px;
+        height:130px;
+    }
+}
+@media only screen and (max-width:700px){
+    .emergency{
+        height:1050px;;
+    }
+    .emergency img{
+        width:130px;
+        height:130px;
+    }
 }
