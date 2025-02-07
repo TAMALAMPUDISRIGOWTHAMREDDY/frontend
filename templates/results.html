@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>ePharma - Medication Result</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="../static/css/styles.css">
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
@@ -15,14 +15,19 @@
     <h2>Recommended Medicine:</h2>
     <p>{{ medicine }}</p>
 
-    <h3>First Aid Guides</h3>
-    <ul>
-        <li><a href="/cpr">CPR</a></li>
-        <li><a href="/snake_bites">Snake Bites</a></li>
-        <li><a href="/fire_accidents">Fire Accidents</a></li>
-        <li><a href="/electric_shocks">Electric Shocks</a></li>
-    </ul>
-    
+    <div class="emergency" id="Guide">
+        <h1 class="now">Emergency Guides</h1>
+        <p class="now">If you need further assistance, check out the following first aid guides:</p>
+        <ul>
+            <li><a class="new" href="../templates/first_aid/cpr.html"><img src="../static/images/cpr.jpg" alt="CPR"><figcaption>CPR</figcaption></a></li>
+            <li><a class="new" href="../templates/first_aid/snake_bites.html"><img src="../static/images/snake_bite.jpg" alt="Snake Bite"><figcaption>Snake Bite</figcaption></a></li>
+            <li><a class="new" href="../templates/first_aid/fire_accidents.html"><img src="../static/images/fire_accident.jpg" alt="Fire Accident"><figcaption>Fire Accident</figcaption></a></li>
+            <li><a class="new" href="../templates/first_aid/electric_shocks.html"><img src="../static/images/electric_shock.jpg" alt="Electric Shock"><figcaption>Electric Shock</figcaption></a></li>
+        </ul>
+    </div>
+    <article>
+        <h6 id="disclaimer">Disclaimer: Please Consult a Doctor As Well</h6>
+    </article>
     <br>
     <a href="/">Back to Home</a>
 </body>
