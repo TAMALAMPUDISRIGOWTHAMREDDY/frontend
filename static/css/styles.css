@@ -154,6 +154,13 @@ button:hover {
     color:rgba(255,0,0,1.2);
     font-size: 20px;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color:blue;
+}
 @media only screen and (max-width:1475px){
     .emergency{
         height:550px;;
