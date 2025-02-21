@@ -23,17 +23,17 @@
     <div class="emergency" id="Guide">
         <h1 class="now">Emergency Guides</h1>
         <p class="now">If you need further assistance, check out the following first aid guides:</p>
-        <ul>
-            <li><a class="new" href="../templates/first_aid/cpr.html"><img src="../static/images/cpr.jpg" alt="CPR"><figcaption>CPR</figcaption></a></li>
-            <li><a class="new" href="../templates/first_aid/snake_bites.html"><img src="../static/images/snake_bite.jpg" alt="Snake Bite"><figcaption>Snake Bite</figcaption></a></li>
-            <li><a class="new" href="../templates/first_aid/fire_accidents.html"><img src="../static/images/fire_accident.jpg" alt="Fire Accident"><figcaption>Fire Accident</figcaption></a></li>
-            <li><a class="new" href="../templates/first_aid/electric_shocks.html"><img src="../static/images/electric_shock.jpg" alt="Electric Shock"><figcaption>Electric Shock</figcaption></a></li>
+        <ul><!--"../templates/first_aid/cpr.html"--> <!--"{{ url_for('snake_bites') }}"-->
+            <li><a class="new" href="{{ url_for('cpr') }}"><img src="../static/images/cpr.jpg" alt="CPR"><figcaption>CPR</figcaption></a></li>
+            <li><a class="new" href="{{ url_for('snake_bites') }}"><img src="../static/images/snake_bite.jpg" alt="Snake Bite"><figcaption>Snake Bite</figcaption></a></li>
+            <li><a class="new" href="{{ url_for('fire_accidents') }}"><img src="../static/images/fire_accident.jpg" alt="Fire Accident"><figcaption>Fire Accident</figcaption></a></li>
+            <li><a class="new" href="{{ url_for('electric_shock') }}"><img src="../static/images/electric_shock.jpg" alt="Electric Shock"><figcaption>Electric Shock</figcaption></a></li>
         </ul>
     </div>
     <article>
         <h6 id="disclaimer">Disclaimer: Please Consult a Doctor As Well</h6>
     </article>
     <br>
-    <a href="index.html">Back to Home<i class="fa fa-home"></i></a>
+    <a href="{{ url_for('index') }}">Back to Home<i class="fa fa-home"></i></a>
 </body>
 </html>
